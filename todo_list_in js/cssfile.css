@@ -1,0 +1,65 @@
+.header{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.search{
+    display: flex;
+    font-size: 20px;
+}
+
+.todo{
+    width: 1800px;
+    height: 40px;
+}
+
+
+.Allbutton{
+    display: flex;
+    justify-content: center;
+    /* font-size: xx-large; */
+    gap:15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.all{
+    background-color: white;
+    font-size: 20px;
+    color: black;
+}
+
+.high{
+    background-color:red;
+    font-size: 20px;
+    color: white;
+}
+
+
+
+.medium{
+    background-color:orange ;
+    font-size: 20px;
+    color: white;
+}
+
+.low{
+    background-color:yellow ;
+    font-size: 20px;
+    color: white;
+
+}
+
+.nA{
+    background-color:gray;
+    font-size: 20px;
+    color: white;
+
+}
+
+.list{
+    height: 30px;
+    width:100%;
+    border: 1px solid gray;
+}

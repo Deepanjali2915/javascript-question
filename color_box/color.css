@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+#Box {
+    border: 2px solid gainsboro;
+    height: 500px;
+    width: 700px;
+    background-color: gainsboro;
+}
+
+#Green {
+    border: 2px solid green;
+    height: 150px;
+    width: 150px;
+    background-color: green;
+}
+
+#Blue {
+    border: 2px solid blue;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+}
+
+#Red {
+    border: 2px solid red;
+    height: 150px;
+    width: 150px;
+    background-color: red;
+}
+
+#Pink {
+    border: 2px solid pink;
+    height: 150px;
+    width: 150px;
+    background-color: pink;
+}
