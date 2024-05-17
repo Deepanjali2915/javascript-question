@@ -1,0 +1,15 @@
+*{
+    background-color: pink;
+    }
+ 
+#input,#submit{
+    font-size:30px;
+}        
+ 
+.details{
+    width:850px;    
+    margin:auto;
+    font-size: 40px;        
+}    
+
+
