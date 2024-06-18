@@ -2,28 +2,28 @@
 function add(num1,num2){
     return num1+num2;
 }
-console.log(add(2,5))
+// console.log(add(2,5))
 
 
 // b--
 function multiply(num1,num2){
     return num1*num2;
 }
-console.log(multiply(2,5))
+// console.log(multiply(2,5))
 
 
 // c--
 function subtract(num1,num2){
     return num1-num2;
 }
-console.log(subtract(5,2))
+// console.log(subtract(5,2))
 
 
 // d--
 function divide(num1,num2){
     return num1/num2;
 }
-console.log(divide(6,2))
+// console.log(divide(6,2))
 
 
 // e--

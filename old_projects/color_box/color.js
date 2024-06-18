@@ -1,9 +1,9 @@
 let Box = document.getElementById("Box")
 
-// let green = document.getElementById("Green")
-// green.onclick = function () {
-//   Box.style.backgroundColor = "green"
-// }
+let green = document.getElementById("Green")
+green.onclick = function () {
+  Box.style.backgroundColor = "green"
+}
 
 
 // let green = document.getElementById("Green")
@@ -12,10 +12,10 @@ let Box = document.getElementById("Box")
 //   Box.style.backgroundColor = "green"
 // }
 
-let green = document.getElementById("Green")
-green.addEventListener("click", function abc() {
-  Box.style.backgroundColor = "green"
-})
+// let green = document.getElementById("Green")
+// green.addEventListener("click", function abc() {
+//   Box.style.backgroundColor = "green"
+// })
 
 
 
