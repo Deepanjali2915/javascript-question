@@ -1,51 +1,32 @@
 // 1-----/
+function greet(name) {
+    return ("Hello, " + name + "!");
+}
 
-// function greet(name){
-//     return ("Hello, "+ name+"!")
-// }
-// console.log(greet("alice"))
-
-
-// 2-----
-// function greet(name){
-//     return ("Hello, "+ name+"!")
-// }
-
-// a=greet("Deepanjali")
-// console.log(a)
+// //b
+let greeting = greet("Deepanjali");
+console.log(greeting);
 
 
-// 3----
-// function greet(name="guest"){                      
-//     return ("Hello, "+ name+"!")
-// }
-// a=greet("Deepanjali")
-// b=greet()
-// c=greet("swed")
-// console.log(a)
-// console.log(b)
-// console.log(c)
+// c----
+function greetDefult(name = "Guest") {                      
+    return ("Hello, " + name + "!");
+}
+let greeting1 = greetDefult();
+console.log(greeting1);
 
 
-
-// 4-----
-// greetFunction= function (name="guest"){                      
-//     return ("Hello, "+ name+"!")
-// }
-
-// a=greetFunction("Deepanjali")
-// b=greetFunction()
-// c=greetFunction("swed")
-// console.log(a)
-// console.log(b)
-// console.log(c)
+// d-----
+let greetFunction = function (name="Guest") {                      
+    return ("Hello, " + name + "!");
+}
+let greeting2 = greetFunction("Deepanjali");
+console.log(greeting2);
 
 
-
-// 5----
-// greet=(name)=>{
-//     return ("Hello, "+ name+"!")
-// }
-
-// a=greet("Deepanjali")
-// console.log(a)
+// e----
+let greetArrow = (name)=> {
+    return ("Hello, " + name + "!");
+}
+let greeting3 = greetArrow("Deepanjali");
+console.log(greeting3);
