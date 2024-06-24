@@ -1,50 +1,41 @@
-// 1----
-// function calculateArea(width,height){
-//     return (width*height)
-// }
-// console.log(calculateArea(12,3))
+// a----
+function calculateArea(width, height) {
+    return (width*height);
+}
 
+// b---
+let area = calculateArea(5, 10);
+console.log(area);
 
+// c----
+function calculateArea(width=1, height=1) {
+    return (width*height);
+}
 
-// 2---
-// function calculateArea(width,height){
-//     return (width*height)
-// }
+area = calculateArea(5, 10);
+console.log(area);
 
-// w=calculateArea(5,10)
-// console.log(w)
+area = calculateArea();
+console.log(area);
 
+// d---
+let calculateAreaFunction = function(width=1, height=1) {
+    return (width*height);
+}
 
+area = calculateAreaFunction(10, 20);
+console.log(area);
 
-// // 3----
-// function calculateArea(width=1,height=1){
-//     return (width*height)
-// }
+area = calculateAreaFunction();
+console.log(area);
 
-// w=calculateArea(5,10)
-// x=calculateArea()
-// console.log(w)
-// console.log(x)
+// e----
+let calculateAreaArrow = (width=1, height=1) => {
+    return (width*height);
+}
 
+area = calculateAreaArrow(10, 20);
+console.log(area);
 
-
-// 4---
-// calculateAreaFunction=function(width=1,height=1){
-//     return (width*height)
-// }
-
-// w=calculateAreaFunction(5,10)
-// x=calculateAreaFunction()
-// console.log(w)
-// console.log(x)
-
-
-// 5----
-// calculateAreaFunction=(width=1,height=1)=>{
-//     return (width*height)
-// }
-
-// w=calculateAreaFunction(5,10)
-// x=calculateAreaFunction()
-// console.log(w)
-// console.log(x)
+area = calculateAreaArrow();
+console.log(area);

@@ -1,40 +1,29 @@
 // a--
-function doubleNumber(num){
+function doubleNumber(num) {
     return num*2;
 }
 
-console.log(doubleNumber(2));
-
-
 // b---
-function squareNumber(num){
+function squareNumber(num) {
     return num*num;
 }
-console.log(squareNumber(4))
 
-
-// // c---
-function incrementNumber(num){
+// c---
+function incrementNumber(num) {
     return num+1;
 }
 
-function number(num,callback){
-    return callback(num);
+// d---
+function performOperation(num, operation) {
+    return operation(num);
 }
-console.log(number(6,incrementNumber));
 
+// e---
+let result = performOperation(7, doubleNumber);
+console.log(result);
 
-// // d---
-function performOperation(num,operation){
-    result=operation(num)
-    return result ;
-}
-A=(performOperation(7,doubleNumber))
-B=(performOperation(8,squareNumber))
-C=(performOperation(9,incrementNumber))
+result = performOperation(8, squareNumber);
+console.log(result);
 
-
-// e----
-console.log(A)
-console.log(B)
-console.log(C)
+result = performOperation(9, incrementNumber);
+console.log(result);

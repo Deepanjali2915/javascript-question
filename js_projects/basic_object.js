@@ -1,13 +1,23 @@
-student={name:"Deepu",email:"deepanjali20@navgurukul.org",age:24}
-// console.log(student.name)
-student.age=10
-// console.log(student.age)
+// a
+let student = {};
 
+// b
+student.name = "Deepanjali";
+student.email = "deepanjali20@navgurukul.org";
+student.age = 24;
 
-student.greet= function(){
-    return ("Hello, "+ student.name+"!")
+// c
+console.log(student.name);
+
+// d
+student.age = 10;
+console.log(student.age);
+
+// e
+student.greet = function() {
+    console.log("Hello, " + this.name + "!");
 }
-console.log(student.greet())
+student.greet();
 
 
 
