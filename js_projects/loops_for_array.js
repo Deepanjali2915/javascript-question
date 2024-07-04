@@ -1,21 +1,17 @@
-color=[ "red", "green", "blue"]
-for (let i = 0; i < color.length; i++) {
-    // text += color[i] + "<br>";
-    console.log(color[i])
+//a
+colors=[ "red", "green", "blue"]
+for (let i = 0; i < colors.length; i++) {
+    console.log(colors[i])
   }
 
-
-
+//b
   i=0
-  while (i<color.length){
-    console.log(color[i])
+  while (i<colors.length) {
+    console.log(colors[i])
     i++
   }
 
-
-
-
-
-  for (let x of color){
+//c
+  for (let x of colors) {
     console.log(x)
   }

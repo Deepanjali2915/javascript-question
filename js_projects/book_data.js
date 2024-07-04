@@ -1,5 +1,5 @@
-
-class Book_data {
+//a
+class Book{
     constructor(title, author, publisher, year, genre) {
         this.title = title
         this.author = author
@@ -8,24 +8,28 @@ class Book_data {
         this.genre = genre
     }
 
+    //b
     describe() {
-        return (this.title + "-" + this.author+"("+ this.year+")")
+        console.log(`${this.title} - ${this.author} (${this.year})`);
 
     }
 
+    //c
     displayGenre() {
-        return ("Genre: " + this.genre)
+        console.log(`Genre: ${this.genre}`);
 
     }
 }
+//d
+classicBook = new Book("Things fall apart", "Chinua achebe", "KAjal", 1958, "Historical fiction");
+console.log("Classic Book", classicBook);
 
-normalBook = new Book_data("Five Points Someone","Chetan Bhagat","Shivani",2004,"Historical fiction")
-classicBook = new Book_data("Things fall apart","Chinua achebe","KAjal",1958,"Historical fiction")
-sciFiBook = new Book_data("Fairy tales","Hans Christian Andersen","hena",1836,"anime")
+//e
+sciFiBook = new Book("Fairy tales", "Hans Christian Andersen", "hena", 1836, "anime");
+console.log("sciFiBook", sciFiBook);
 
-console.log("Book", normalBook)
-console.log(normalBook.describe())
-console.log(normalBook.displayGenre())
-console.log("Classic Book", classicBook)
-console.log(classicBook.describe())
-console.log(classicBook.displayGenre())
+//f
+classicBook.describe();
+
+//g
+sciFiBook.displayGenre();

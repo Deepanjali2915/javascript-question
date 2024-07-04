@@ -4,7 +4,7 @@ function calculateArea(width, height) {
 }
 
 // b---
-let area = calculateArea(5, 10);
+let area = calculateArea (5, 10);
 console.log(area);
 
 // c----
@@ -12,7 +12,7 @@ function calculateArea(width=1, height=1) {
     return (width*height);
 }
 
-area = calculateArea(5, 10);
+area = calculateArea (5, 10);
 console.log(area);
 
 area = calculateArea();
@@ -23,7 +23,7 @@ let calculateAreaFunction = function(width=1, height=1) {
     return (width*height);
 }
 
-area = calculateAreaFunction(10, 20);
+area = calculateAreaFunction (10, 20);
 console.log(area);
 
 area = calculateAreaFunction();
@@ -34,7 +34,7 @@ let calculateAreaArrow = (width=1, height=1) => {
     return (width*height);
 }
 
-area = calculateAreaArrow(10, 20);
+area = calculateAreaArrow (10, 20);
 console.log(area);
 
 area = calculateAreaArrow();

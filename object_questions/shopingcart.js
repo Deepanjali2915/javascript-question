@@ -1,6 +1,5 @@
-// name, price, and quantity.
-
-cart = [{
+// a
+let cart = [{
     name: "top",
     price: 132,
     quantity: 12
@@ -26,11 +25,8 @@ cart = [{
     quantity: 20
 }
 ]
-// console.log(cart[0].price + cart[1].price+cart[2].price+cart[3].price+cart[4].price)
 
-
-
-
+// b
 function calculateTotalPrice(cart) {
     let total_price = 0
     for (let i = 0; i < cart.length; i++) {
@@ -39,21 +35,11 @@ function calculateTotalPrice(cart) {
     return total_price;
 }
 
-let total_price = calculateTotalPrice(cart);
+// c 
+let total = calculateTotalPrice(cart);
 
-console.log(total_price)
+console.log(total);
 
 
 
 
-// function calculateTotalPrice(cart){
-//     total =cart.reduce(function(a,b){
-//         return a+(b.price*b.quantity)
-//     },0);
-//     return(total)
-// }
-
-// calculateTotalPrice()
-// console.log(total)
-
-// console.log(Object.keys(cart))

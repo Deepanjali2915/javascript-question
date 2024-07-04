@@ -1,5 +1,5 @@
-
-class Employee_data {
+//a
+class Employee {
     constructor(name, email, age, department, position, salary) {
         this.name = name
         this.email = email
@@ -8,24 +8,27 @@ class Employee_data {
         this.position = position
         this.salary = salary
     }
-
+    //b
     introduce() {
-        return ("Hello, my name is " + this.name + "and i work as a" + this.position)
-
+        console.log(`Hello, I am ${this.name}, ${this.position}`);
+        
     }
-
+    //c
     displaySalary() {
-        return ("Salary: " + this.salary)
+        console.log(`Salary: $${this.salary}`);
 
     }
 }
+//d
+let newEmployee = new Employee("Deepanjali", "deepanjali20@navgurukul.org", 21, "Finance", "Accountant", 510000)
+console.log("newEmployee", newEmployee);
 
-one = new Employee_data("Deepanjali", "deepanjali20@navgurukul.org", 21, "Finance", "Accountant", 510000)
-two = new Employee_data("Nishu", "nishu@navgurukul.org", 22, "Marketing", "Executive", 560000)
+//e
+let manager = new Employee("Nishu", "nishu@navgurukul.org", 22, "Marketing", "Executive", 560000)
+console.log("manager", manager);
 
-console.log("one", one)
-console.log(one.introduce())
-console.log(one.displaySalary())
-console.log("two", two)
-console.log(two.introduce())
-console.log(two.displaySalary())
+//f
+newEmployee.introduce();
+
+//g
+manager.displaySalary();

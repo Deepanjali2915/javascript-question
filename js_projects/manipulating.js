@@ -1,40 +1,49 @@
-temperature=[-3,14,22,5,-10]
+//a
+let temperature = [-3, 14, 22, 5, -10];
 
-// b--
-// temperature.forEach(temperature => {
-//     console.log(temperature)
-// });
+// b 
+temperature.forEach(function(temperature) {
+    console.log(temperature);
+});
 
-// function callback(temperature){
-//     console.log(temperature)
-// }
+temperature.forEach(temperature => {
+    console.log(temperature);
+});
 
-// temperature.forEach(callback)
+// c
+temperature.forEach(function(temperature) {
+    console.log((temperature*9/5) + 32);
+});
+
+temperature.forEach(temperature => {
+    console.log((temperature*9/5) + 32);
+});
+
+// d
+let temperaturesInFahrenheit = temperature.map(function(temperature) {
+   let Fahrenheit = ((temperature*9/5) + 32);
+   return Fahrenheit;
+});
+console.log(temperaturesInFahrenheit);
+
+temperaturesInFahrenheit = temperature.map(temperature => {
+    let Fahrenheit = ((temperature*9/5) + 32);
+    return Fahrenheit;
+ });
+ console.log(temperaturesInFahrenheit);
+ 
+// e
+let belowFreezing = temperature.filter(function(temperature) {
+    if (temperature<0){
+        return temperature;
+    };
+ }); 
+ console.log(belowFreezing);
 
 
-// c--
-// celsius=temperature=>{
-//     fahrenheit=(temperature*9/5)+32
-//     console.log(fahrenheit)
-// }
-// temperature.forEach(celsius)
-
-
-// d--
-// function main_fun(callback){
-//     temperaturesInFahrenheit=temperature.map(callback)
-//     console.log(temperaturesInFahrenheit)
-// }
-
-// callback_fun= temperature=>(temperature*9/5)+32
-// main_fun(callback_fun)
-
-
-// e---
-// function belowFreezing(callback){
-//     below=temperature.filter(callback)
-//     console.log(below)
-// }
-
-// callback_fun= temperature=>temperature<0
-// belowFreezing(callback_fun)
+belowFreezing = temperature.filter(temperature => {
+    if (temperature<0){
+        return temperature;
+    };
+ }); 
+ console.log(belowFreezing);

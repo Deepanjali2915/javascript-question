@@ -1,25 +1,26 @@
-color=[ "red", "green", "blue"]
-console.log(typeof(color))
+//a
+colors=[ "red", "green", "blue"]
+console.log(typeof(color));
 
+//b
+console.log(colors.length);
 
-console.log(color.length)
+//c
+colors.push("white");
+console.log(colors);
 
+//d
+colors.pop();
+console.log(colors);
 
-color.push("white")
-console.log(color)
+//e
+a = colors.indexOf("blue");
+console.log(a);
 
+//f
+colors.owner = "Black";
+console.log(colors);
 
-color.pop()
-console.log(color)
-
-
-a=color.indexOf("blue")
-console.log(a)
-
-
-color.owner="Deepanjali"
-console.log(color)
-
-for (i in color){
-    console.log(i+":"+color[i])
+for (i in colors) {
+    console.log(i+":" + colors[i])
 }
