@@ -51,7 +51,7 @@ friend.greet();
 console.log(friend);
 
 // j
-topper = {
+let topper = {
     name: "Anjali",
     email: "anjali11@navgurukul.org",
     age: 26,
@@ -90,15 +90,15 @@ class Student {
 }
 
 //m
-let myself = new Student("Deepanjali", "deepanjali20@navgurukul.org", 21, "India", "Delhi", "110077");
-let my_friend = new Student("Pooja", "pooja@navgurukul.org", 27, "India", "Bangalore", "560038");
-let another_student = new Student("Priya", "priya@navgurukul.org", 25, "India", "Bihar", "112346");
+let mySelf = new Student("Deepanjali", "deepanjali20@navgurukul.org", 21, "India", "Delhi", "110077");
+let myFriend = new Student("Pooja", "pooja@navgurukul.org", 27, "India", "Bangalore", "560038");
+let anotherStudent = new Student("Priya", "priya@navgurukul.org", 25, "India", "Bihar", "112346");
 
-console.log("My Self", myself)
-console.log("My Friend", my_friend)
-console.log("Another Student", another_student)
+console.log("My Self", mySelf)
+console.log("My Friend", myFriend)
+console.log("Another Student", anotherStudent)
 
-my_friend.greet();
+myFriend.greet();
 
 //n
-console.log(another_student.getFullAddress())
+console.log(anotherStudent.getFullAddress())

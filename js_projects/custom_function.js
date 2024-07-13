@@ -1,55 +1,51 @@
-// 1----map
-function mapArray(array, callback) {
-    let list = [];
-    for (let i = 0; i < array.length; i++) {
-        list.push(callback(array[i]));
+// 1--for each
+function forEachArray(array, callback) {
+    for (let element of array) {
+        callback(element);
     };
-    return list;
+};
+let numbers = [15, 16, 17, 18, 19, 20, 21];
+
+let forEachFunction = forEachArray(numbers, function(number) {
+    console.log(number*2);
+});
+
+
+// 2----map
+function mapArray(array, callback) {
+    let newArray = [];
+    for (let element of array) {
+        let newElement = callback(element);
+        newArray.push(newElement);
+    };
+    return newArray;
 };
 
-let mapnumbers = [1, 2, 3, 4, 5, 6, 7];
-function into(num) {
-    return num * 2;
-};
-let multiply = mapArray(mapnumbers, into);
-console.log(multiply);
+let numbersIntoTwo = mapArray(numbers, function(number) {
+    return number * 2;
+});
+console.log(numbersIntoTwo);
 
 
-// 2---filter
+// 3---filter
 function filterArray(array, callback) {
-    let list = []
-    for (let i = 0; i < array.length; i++) {
-        if (callback(array[i])) {
-            list.push(callback(array[i]));
+    let filteredArray = []
+    for (let element of array) {
+        if (callback(element)) {
+            filteredArray.push(element);
         };
     };
-    // console.log(list)
-    return list;
+    return filteredArray;
 };
 
-let filternumbers = [8, 9, 10, 11, 12, 13, 14]
-function even(num) {
-    if (num % 2 == 0) {
-        return num;
+let evenNumbers = filterArray(numbers, function(number) {
+    if (number % 2 == 0) {
+        return true;
     };
-};
-let filternum = filterArray(filternumbers, even);
-console.log(filternum);
+});
+console.log(evenNumbers);
 
 
 
-// 3--for each
-
-function forEacharray(array, callback) {
-    for (let i = 0; i < array.length; i++) {
-        callback(array[i]);
-    };
-};
-let forEachnumbers = [15, 16, 17, 18, 19, 20, 21]
-
-function into(num) {
-    console.log(num*2);
-}
-let forEachFunction = forEacharray(forEachnumbers, into);
 
 

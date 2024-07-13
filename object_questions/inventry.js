@@ -1,74 +1,70 @@
+//a
+let inventory = [{
+    id: 1,
+    name: "Laptop",
+    price: 20000,
+    quantity: 23
+}, {
+    id: 2,
+    name: "Mobile",
+    price: 45000,
+    quantity: 12
+}, {
+    id: 3,
+    name: "Charger",
+    price: 2000,
+    quantity: 150
+}];
+console.log(inventory);
+
+
+//b
 class Product {
-    constructor(id,name,price,quantity,brand) {
-      this.id = id;  
-      this.name = name;
-      this.price = price;
-      this.quantity = quantity;
-      this.brand = brand;
-
+    constructor(id, name, price, quantity) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
     }
-  }
-  
-const inventory=[];
-
-function add(id,name,price,quantity,brand){
-    const product = new Product(id,name,price,quantity,brand);
-        inventory.push(product)
 }
-  
-// add(1,"laptop",20000,23,"thiknpad")
-// add(2,"mobile",45000,12,"nokia")
-// add(3,"charger",2000,150,"vivo")
 
-// console.log("add")
-// console.log(inventory);
+//c
+function addProduct(id, name, price, quantity) {
+    let product = new Product(id, name, price, quantity);
+    inventory.push(product);
+};
+addProduct(4, "Banana", 100, 15);
+console.log("add");
+displayProducts();
 
 
-function update(productId, newQuantity) {
-    const product = inventory.find(product => product.id === productId);
+function updateProduct(productId, newQuantity) {
+    let product = inventory.find(function(product) {
+        if (product.id === productId) {
+            return true;
+        };
+    });
+
     if (product) {
         product.quantity = newQuantity;
-    }
-}
+    };
+};
 
-// update(2, 15);
-// console.log("update")
-// console.log(inventory);
-// display()
-
-
-function remove(productId) {
-    const index = inventory.find(product => product.id === productId);
-        inventory.splice(index,2);
-
-}
-
-// remove(2);
-// console.log("remove")
-// console.log(inventory);
-// display()
-
-function display() {
-    inventory.forEach(product => {
-        console.log(+ product.id + "." + product.name + "-" + product.price + "(" + product.quantity+")");
-    });
-}
-
-
-add(1,"laptop",20000,23,"thiknpad");
-add(2,"mobile",45000,12,"nokia");
-add(3,"charger",2000,150,"vivo");
-console.log("add");
-console.log(inventory);
-display();
-
-update(2, 15);
+updateProduct(2, 15);
 console.log("update");
-// console.log(inventory);
-display();
+displayProducts();
 
 
-remove(2);
+function removeProduct(productId) {
+    inventory.splice(1, 1);
+};
+
+removeProduct(2);
 console.log("remove");
-// console.log(inventory);
-display();
+displayProducts();
+
+function displayProducts() {
+    for(let product of inventory){
+        console.log(`${product.name} - ${product.price} (${product.quantity})`);
+    };
+};

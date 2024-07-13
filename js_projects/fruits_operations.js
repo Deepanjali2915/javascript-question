@@ -23,28 +23,33 @@ console.log(reversedFruit);
 
 
 // d--
-function fliterFruit(callback) {
-    filters = fruits.filter(callback);
-    console.log(filters);
-}
-callback_fun = fruit =>fruit.length>5;
-fliterFruit(callback_fun);
+let filters = fruits.filter(function(fruit){
+    return fruit.length>5;
+});
+
+console.log(filters)
+
+
+filters = fruits.filter(fruit => fruit.length > 5);
+
+console.log(filters);
 
 
 // e--
-filterfruits = fruits.filter(
+let filterfruits = fruits.filter(
     fruit=>fruit.includes("a"));
 
-upperfruits = filterfruits.map(
+let upperfruits = filterfruits.map(
     fruit=>fruit.toUpperCase());
+
 
 console.log(upperfruits);
 
 
 // f--
-totalCharacters=0
-fruits.forEach(element => {
-    totalCharacters+=element.length;
+let totalCharacters=0
+fruits.forEach(fruit => {
+    totalCharacters+=fruit.length;
     
 });
 

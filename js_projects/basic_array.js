@@ -17,19 +17,19 @@ console.log(colors[3]);
 //e
 for (let i = 0; i < colors.length; i++) {
     console.log(colors[i]);
-}
+};
 
 //f
 i=0;
 while (i<colors.length) {
   console.log(colors[i]);
   i++;
-}
+};
 
 //g
 for (let color of colors) {
   console.log(color)
-}
+};
 
 //h
 console.log(typeof(colors));
@@ -57,6 +57,6 @@ console.log(colors);
 //n
 for (i in colors) {
     console.log(i+":" + colors[i])
-}
+};
 
 

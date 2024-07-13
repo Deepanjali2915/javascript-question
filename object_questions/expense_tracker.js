@@ -1,59 +1,67 @@
-class Expenses_tracker {
-    constructor(id, name, price, quantity) {
+//a
+let expenses = [{
+    id: 1,
+    name: "Laptop",
+    amount: 45000,
+    date: "08-02-2023"
+}, {
+    id: 2,
+    name: "Mobile",
+    amount: 65000,
+    date: "07-12-2023"
+}, {
+    id: 3,
+    name: "Charger",
+    amount: 12000,
+    date: "17-02-2023"
+}];
+console.log(expenses);
+
+//b
+class Expense {
+    constructor(id, name, amount, date) {
         this.id = id;
         this.name = name;
-        this.price = price;
-        this.quantity = quantity;
+        this.amount = amount;
+        this.date = date;
+    };
+};
 
-    }
+//c
+function addExpense(id, name, amount, date) {
+    let expense = new Expense(id, name, amount, date);
+    expenses.push(expense);
+};
+addExpense(4, "Mango", 200, "01-03-2023");
+
+console.log("addExpense");
+displayExpenses();
+
+
+function updateExpense(expenseId, newDate) {
+    let expense = expenses.find(function(expense){
+        return expense.id === expenseId;
+    }) 
+    if (expense) {
+        expense.date = newDate
+    };
+};
+
+updateExpense(2, "10-03-2023");
+console.log("updateExpense");
+displayExpenses();
+
+function removeExpense(expenseID) {
+    expenses.splice(expenseID, 1);
 }
 
-const expense = [];
-
-function add(id, name, price, quantity) {
-    const product = new Expenses_tracker(id, name, price, quantity);
-    expense.push(product)
-}
-add(1, "laptop", 20000, 23, "thiknpad");
-add(2, "mobile", 45000, 12, "nokia");
-add(3, "charger", 2000, 150, "vivo");
-console.log("add");
-console.log(expense);
+removeExpense(3);
+console.log("removeExpense");
+displayExpenses();
 
 
-function update(productId, newQuantity) {
-    const product = expense.find(product => product.id === productId);
-    if (product) {
-        product.quantity = newQuantity;
-    }
-}
-
-update(2, 15);
-console.log("update");
-console.log(expense);
-
-
-
-function remove(productId) {
-    const index = expense.findIndex(product => product.id === productId);
-    expense.splice(index, 1);
-
-}
-
-remove(3);
-console.log("remove");
-console.log(expense);
-
-
-function calculateTotalPrice(expense) {
-    let total_price = 0
-    for (let i = 0; i < expense.length; i++) {
-        total_price += expense[i].price * expense[i].quantity
-    }
-    return total_price;
-}
-
-let total_price = calculateTotalPrice(expense);
-
-console.log("total price");
-console.log(total_price);
+function displayExpenses() {
+    expenses.map(function(product) {
+        console.log(`${product.name} - ${product.amount} (${product.date})`);
+    });
+};

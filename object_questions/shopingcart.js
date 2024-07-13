@@ -1,26 +1,26 @@
 // a
 let cart = [{
-    name: "top",
+    name: "Top",
     price: 132,
     quantity: 12
 },
 {
-    name: "shirt",
+    name: "Shirt",
     price: 100,
     quantity: 10
 },
 {
-    name: "laptop",
+    name: "Laptop",
     price: 20000,
     quantity: 70
 },
 {
-    name: "mobile",
+    name: "Mobile",
     price: 900,
     quantity: 25
 },
 {
-    name: "bottel",
+    name: "Bottle",
     price: 120,
     quantity: 20
 }
@@ -28,16 +28,15 @@ let cart = [{
 
 // b
 function calculateTotalPrice(cart) {
-    let total_price = 0
-    for (let i = 0; i < cart.length; i++) {
-        total_price += cart[i].price*cart[i].quantity
-    }
-    return total_price;
-}
+    let totalPrice = 0;
+    for (let item of cart) {
+        totalPrice += item.price*item.quantity;
+    };
+    return totalPrice;
+};
 
 // c 
 let total = calculateTotalPrice(cart);
-
 console.log(total);
 
 

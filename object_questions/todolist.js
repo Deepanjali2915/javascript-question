@@ -1,52 +1,73 @@
-class Todo_list {
-    constructor(id, work, time, status) {
+//a
+let tasks = [{
+    id: 1,
+    description: "House work",
+    dueDate: "2 hour",
+    status: "Complete"
+}, {
+    id: 2,
+    description: "Office work",
+    dueDate: "3 hour",
+    status: "Not complete"
+}, {
+    id: 3,
+    description: "Project",
+    dueDate: "5 hour",
+    status: "Half complete"
+}];
+console.log(tasks);
+
+//b
+class Task {
+    constructor(id, description, dueDate, status) {
         this.id = id;
-        this.work = work;
-        this.time = time;
+        this.description = description;
+        this.dueDate = dueDate;
         this.status = status;
-    }
-}
+    };
+};
 
-const list = [];
+//c
+function addTask(id, description, dueDate, status) {
+    const task = new Task(id, description, dueDate, status);
+    tasks.push(task)
+};
+addTask(4, "outside work", "2 hours" , "Done");
+console.log("addTask");
+displayTasks();
 
-function add(id, work, time, status) {
-    const todolist = new Todo_list(id, work, time, status);
-    list.push(todolist)
-}
-
-function update(todolistId, newtime) {
-    const todolist = list.find(todolist => todolist.id === todolistId);
-    if (todolist) {
-        todolist.time = newtime;
-    }
-}
-
-function remove(todolistId) {
-    const index = list.find(todolist => todolist.id === todolistId);
-    list.splice(index, 2);
-}
-
-function display() {
-    list.forEach(product => {
-        console.log(+ product.id + "." + product.work + "-" + product.time + "(" + product.status + ")");
+function updateTask(taskId, newdueDate) {
+    const task = tasks.find(function(task) {
+        return task.id === taskId;
     });
-}
+
+    if (task) {
+        task.dueDate = newdueDate;
+    };
+};
+updateTask(2, 15);
+console.log("updateTask");
+displayTasks();
+
+function removeTask(taskId) {
+    tasks = tasks.filter(function(task) {
+        if (task.id != taskId) {
+            return true;
+        };
+    });
+
+};
+removeTask(1);
+console.log("removeTask");
+displayTasks();
+
+function displayTasks() {
+    tasks.forEach(function(task) {
+        console.log(`${task.description} - ${task.dueDate} (${task.status})`);
+    });
+};
 
 
-add(1, "room", 2, "yes");
-add(2, "dress", 4, "no");
-add(3, "outside", 2, "yes");
-console.log("add");
-// console.log(list);
-display();
-
-update(2, 15);
-console.log("update");
-// console.log(list);
-display();
 
 
-remove(2);
-console.log("remove");
-// console.log(list);
-display();
+

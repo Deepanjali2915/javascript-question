@@ -1,74 +1,70 @@
-class Bookstore {
-  constructor(id,name,price,quantity,brand) {
-    this.id = id;  
-    this.name = name;
+//a
+let inventory = [{
+  id: 1,
+  title: "Hindi",
+  author: "Pooja",
+  price: 2000,
+  quantity: 3
+}, {
+  id: 2,
+  title: "English",
+  author: "Shivani",
+  price: 40,
+  quantity: 2
+}, {
+  id: 3,
+  title: "Math",
+  author: "Rani",
+  price: 20,
+  quantity: 10
+}];
+console.log(inventory);
+
+//b
+class Book {
+  constructor(id, title, author, price, quantity) {
+    this.id = id;
+    this.title = title;
+    this.author = author;
     this.price = price;
     this.quantity = quantity;
-    this.brand = brand;
-
   }
+};
+
+//c
+function addBook(id, title, author, price, quantity) {
+  let book = new Book(id, title, author, price, quantity);
+  inventory.push(book)
+};
+
+addBook(4, "Computer", 200, "Sonam", 12);
+console.log("addBook");
+display();
+
+function updateBook(bookId, newQuantity) {
+  const book = inventory.find(function(book) {
+    return book.id === bookId;
+  });
+
+  if (book) {
+    book.quantity = newQuantity;
+  };
+};
+
+updateBook(2, 15);
+console.log("updateBook");
+display();
+
+function removeBook(bookId) {
+  inventory.splice(bookId, 1);
 }
 
-const book=[];
-
-function add(id,name,price,quantity,brand){
-  const product = new Bookstore(id,name,price,quantity,brand);
-  book.push(product)
-}
-
-// add(1,"laptop",20000,23,"thiknpad")
-// add(2,"mobile",45000,12,"nokia")
-// add(3,"charger",2000,150,"vivo")
-
-// console.log("add")
-// console.log(inventory);
-
-
-function update(productId, newQuantity) {
-  const product = book.find(product => product.id === productId);
-  if (product) {
-      product.quantity = newQuantity;
-  }
-}
-
-// update(2, 15);
-// console.log("update")
-// console.log(inventory);
-// display()
-
-
-function remove(productId) {
-  const index = book.find(product => product.id === productId);
-  book.splice(index,2);
-
-}
-
-// remove(2);
-// console.log("remove")
-// console.log(inventory);
-// display()
+removeBook(1);
+console.log("removeBook");
+display();
 
 function display() {
-  book.forEach(product => {
-      console.log(+ product.id + "." + product.name + "-" + product.price + "(" + product.quantity+")");
+  inventory.forEach(function(product) {
+    console.log(`${product.title} - ${product.price} (${product.quantity})`);
   });
 }
-
-
-add(1,"hindi",200,23,"10th");
-add(2,"english",450,12,"10th");
-add(3,"math",200,150,"10th");
-console.log("add");
-console.log(book);
-display();
-
-update(2, 15);
-console.log("update");
-// console.log(inventory);
-display();
-
-
-remove(2);
-console.log("remove");
-// console.log(inventory);
-display();
